@@ -1,0 +1,583 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<style>
+
+		#wrapper {
+			height: 60vh;
+			width: 50vw;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 16px;
+		}
+		#textbox {
+			width: 50vw;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 16px;
+		}
+		#menu{
+			margin-top: 30px;
+
+		}
+		span{
+			font-size: 20px;
+			-webkit-margin-before: 1em;
+			margin-right: 5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="menu">
+			<input id="text" autofocus><br><br>
+			<span>Letter emoji</span><select id="emoji">
+				<option value="&#x1F349">&#x1F349</option>
+				<option value="&#x1F602">&#x1F602</option>
+				<option value="&#x1F605">&#x1F605</option>
+				<option value="&#x1F380">&#x1F380</option>
+				<option value="&#x1F381">&#x1F381</option>
+				<option value="&#x1F382">&#x1F382</option>
+				<option value="&#x1F383">&#x1F383</option>
+				<option value="&#x1F384">&#x1F384</option>
+				<option value="&#x1F385">&#x1F385</option>
+				<option value="&#x2615">&#x2615</option>
+				<option value="&#x1F621">&#x1F621</option>
+				<option value="&#x1F630">&#x1F630</option>
+				<option value="&#x1F649">&#x1F649</option>
+				<option value="&#x270C">&#x270C</option>
+				<option value="&#x2728">&#x2728</option>
+				<option value="&#x2753">&#x2753</option>
+				<option value="&#x2757">&#x2757</option>
+				<option value="&#x1F680">&#x1F680</option>
+				<option value="&#x1F68C">&#x1F68C</option>
+				<option value="&#x1F6C0">&#x1F6C0</option>
+				<option value="&#x2614">&#x1614</option>
+				<option value="&#x26A1">&#x26A1</option>
+				<option value="&#x26BD">&#x26BD</option>
+				<option value="&#x26D4">&#x26D4</option>
+				<option value="&#x2B50">&#x2B50</option>
+				<option value="&#x1F308">&#x1F308</option>
+				<option value="&#x1F30F">&#x1F30F</option>
+				<option value="&#x1F31B">&#x1F31B</option>
+				<option value="&#x1F335">&#x1F335</option>
+				<option value="&#x1F339">&#x1F339</option>
+				<option value="&#x1F340">&#x1F340</option>
+				<option value="&#x1F341">&#x1F341</option>
+				<option value="&#x1F34F">&#x1F34F</option>
+				<option value="&#x1F352">&#x1F352</option>
+				<option value="&#x1F353">&#x1F353</option>
+				<option value="&#x1F355">&#x1F355</option>
+				<option value="&#x1F3A9">&#x1F3A9</option>
+				<option value="&#x1F3AE">&#x1F3AE</option>
+				<option value="&#x1F382">&#x1F382</option>
+				<option value="&#x1F3BA">&#x1F3BA</option>
+				<option value="&#x1F433">&#x1F433</option>
+				<option value="&#x1F44C">&#x1F44C</option>
+				<option value="&#x1F453">&#x1F453</option>
+				<option value="&#x1F4A3">&#x1F4A3</option>
+				<option value="&#x1F4A9">&#x1F4A9</option>
+				<option value="&#x1F4AF">&#x1F4AF</option>
+				<option value="&#x1F4B2">&#x1F4B2</option>
+				<option value="&#x1F409">&#x1F409</option>
+			</select><br><br>
+			<span>Background emoji:</span><select id="background" onchange="enableCheck()">
+				<option value="&nbsp&nbsp&nbsp&nbsp&nbsp">-</option>
+				<option value="&#x1F380">&#x1F380</option>
+				<option value="&#x1F381">&#x1F381</option>
+				<option value="&#x1F382">&#x1F382</option>
+				<option value="&#x1F383">&#x1F383</option>
+				<option value="&#x1F384">&#x1F384</option>
+				<option value="&#x1F385">&#x1F385</option>
+				<option value="&#x2615">&#x2615</option>
+				<option value="&#x1F621">&#x1F621</option>
+				<option value="&#x1F630">&#x1F630</option>
+				<option value="&#x1F649">&#x1F649</option>
+				<option value="&#x270C">&#x270C</option>
+				<option value="&#x2728">&#x2728</option>
+				<option value="&#x2753">&#x2753</option>
+				<option value="&#x2757">&#x2757</option>
+				<option value="&#x1F680">&#x1F680</option>
+				<option value="&#x1F68C">&#x1F68C</option>
+				<option value="&#x1F6C0">&#x1F6C0</option>
+				<option value="&#x2614">&#x1614</option>
+				<option value="&#x26A1">&#x26A1</option>
+				<option value="&#x26BD">&#x26BD</option>
+				<option value="&#x26D4">&#x26D4</option>
+				<option value="&#x2B50">&#x2B50</option>
+				<option value="&#x1F308">&#x1F308</option>
+				<option value="&#x1F30F">&#x1F30F</option>
+				<option value="&#x1F31B">&#x1F31B</option>
+				<option value="&#x1F335">&#x1F335</option>
+				<option value="&#x1F339">&#x1F339</option>
+				<option value="&#x1F340">&#x1F340</option>
+				<option value="&#x1F341">&#x1F341</option>
+				<option value="&#x1F349">&#x1F349</option>
+				<option value="&#x1F34F">&#x1F34F</option>
+				<option value="&#x1F352">&#x1F352</option>
+				<option value="&#x1F353">&#x1F353</option>
+				<option value="&#x1F355">&#x1F355</option>
+				<option value="&#x1F3A9">&#x1F3A9</option>
+				<option value="&#x1F3AE">&#x1F3AE</option>
+				<option value="&#x1F382">&#x1F382</option>
+				<option value="&#x1F3BA">&#x1F3BA</option>
+				<option value="&#x1F433">&#x1F433</option>
+				<option value="&#x1F44C">&#x1F44C</option>
+				<option value="&#x1F453">&#x1F453</option>
+				<option value="&#x1F4A3">&#x1F4A3</option>
+				<option value="&#x1F4A9">&#x1F4A9</option>
+				<option value="&#x1F4AF">&#x1F4AF</option>
+				<option value="&#x1F4B2">&#x1F4B2</option>
+				<option value="&#x1F409">&#x1F409</option>
+			</select><br><br>
+			<input type="checkbox" id="check">For Facebook<br><br>
+			<button type="button" onclick="sbmit()">Submit</button><br>
+		</div>
+		<div id="textbox"></div>
+	</div>
+
+	<script>
+
+		function sbmit(){
+			var text = document.getElementById("text").value.toUpperCase().split("");
+			var e = document.getElementById("emoji").value;
+			var b = document.getElementById("background").value;
+			document.getElementById("textbox").innerHTML = "";
+			if(document.getElementById("check").checked && document.getElementById("background").selectedIndex == 0){
+				b += "&nbsp&nbsp&nbsp";
+			}
+
+			for(var i = 0; i < text.length; i++){
+				switch(text[i]){
+					case "1":
+						document.getElementById("textbox").innerHTML += b + b + b + b + e + "<br>" +
+																		b + b + b + e + e + "<br>" +
+																		b + b + e + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>";
+					break;
+					case "2":
+						document.getElementById("textbox").innerHTML += b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		e + e + b + b + b + "<br>" +
+																		e + e + e + e + e + "<br>";
+					break;
+					case "3":
+						document.getElementById("textbox").innerHTML += b + b + b + b + e + "<br>" +
+																		b + b + b + e + e + "<br>" +
+																		b + b + e + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>";
+					break;
+					case "4":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + e + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		e + e + e + e + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + b + e + b + "<br>";
+					break;
+					case "5":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + b + b + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		b + e + e + b + b + "<br>";
+					break;
+					case "6":
+						document.getElementById("textbox").innerHTML += b + b + b + b + e + "<br>" +
+																		b + b + b + e + e + "<br>" +
+																		b + b + e + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>";
+					break;
+					case "7":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + e + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>";
+					break;
+					case "8":
+						document.getElementById("textbox").innerHTML += b + b + e + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "9":
+						document.getElementById("textbox").innerHTML += b + b + b + b + e + "<br>" +
+																		b + b + b + e + e + "<br>" +
+																		b + b + e + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>";
+					break;
+					case "Á":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					case "A":
+						document.getElementById("textbox").innerHTML += b + b + e + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + e + e + e + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "B":
+						document.getElementById("textbox").innerHTML += e + e + e + b + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + e + e + e + b + "<br>";
+					break;
+					case "C":
+						document.getElementById("textbox").innerHTML += b + b + e + e + e + "<br>" +
+																		b + e + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		b + e + b + b + b + "<br>" +
+																		b + b + e + e + e + "<br>";
+					break;
+					case "D":
+						document.getElementById("textbox").innerHTML += e + e + e + b + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + e + e + b + b + "<br>";
+					break;
+					case "É":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					case "E":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + e + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + e + e + "<br>";
+					break;
+					case "F":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>";
+					break;
+					case "G":
+						document.getElementById("textbox").innerHTML += b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "H":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + e + e + e + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "Í":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					case "I":
+						document.getElementById("textbox").innerHTML += b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+					case "J":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + e + e + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		b + e + e + b + b + "<br>";
+					break;
+					case "K":
+						document.getElementById("textbox").innerHTML += e + b + b + e + b + "<br>" +
+																		e + b + e + b + b + "<br>" +
+																		e + e + b + b + b + "<br>" +
+																		e + e + b + b + b + "<br>" +
+																		e + b + e + b + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "L":
+						document.getElementById("textbox").innerHTML += e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + e + e + "<br>";
+					break;
+					case "M":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + e + b + e + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "N":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + e + b + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + b + e + e + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "Ó":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					case "O":
+						document.getElementById("textbox").innerHTML += b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "Ö":
+						document.getElementById("textbox").innerHTML += b + b + b + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "Ő":
+						document.getElementById("textbox").innerHTML += b + b + e + b + e + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "P":
+						document.getElementById("textbox").innerHTML += e + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + e + e + e + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>";
+					break;
+					case "Q":
+						document.getElementById("textbox").innerHTML += b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + b + e + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "R":
+						document.getElementById("textbox").innerHTML += e + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + e + e + e + b + "<br>" +
+																		e + b + e + b + b + "<br>" +
+																		e + b + b + e + b + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "S":
+						document.getElementById("textbox").innerHTML += b + e + e + e + e + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		b + e + b + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		e + e + e + e + b + "<br>";
+					break;
+					case "T":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+					case "Ú":
+						document.getElementById("textbox").innerHTML += b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					case "U":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "Ü":
+						document.getElementById("textbox").innerHTML += b + b + b + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "Ű":
+						document.getElementById("textbox").innerHTML += b + b + e + b + e + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + e + e + b + "<br>";
+					break;
+					case "V":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+					case "W":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		e + b + e + b + e + "<br>" +
+																		b + e + b + e + b + "<br>";
+					break;
+					case "X":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		e + e + b + e + e + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		e + e + b + e + e + "<br>" +
+																		e + b + b + b + e + "<br>";
+					break;
+					case "Y":
+						document.getElementById("textbox").innerHTML += e + b + b + b + e + "<br>" +
+																		b + e + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+					case "Z":
+						document.getElementById("textbox").innerHTML += e + e + e + e + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + e + b + b + b + "<br>" +
+																		e + b + b + b + b + "<br>" +
+																		e + e + e + e + e + "<br>";
+					break;
+					case " ":
+						document.getElementById("textbox").innerHTML += b + b + b + b + b+ "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + b + b + b + b + "<br>";
+					break;
+					case "!":
+						document.getElementById("textbox").innerHTML += b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+					case "?":
+						document.getElementById("textbox").innerHTML += b + e + e + e + b + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		e + b + b + b + e + "<br>" +
+																		b + b + b + b + e + "<br>" +
+																		b + b + b + e + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + e + b + b + "<br>" +
+																		b + b + b + b + b + "<br>" +
+																		b + b + e + b + b + "<br>";
+					break;
+				}
+				if(i != text.length-1){
+					document.getElementById("textbox").innerHTML += b + b + b + b + b + "<br>";
+				}
+			}
+			return false;
+		}
+
+		function enableCheck(){
+			if(document.getElementById("background").selectedIndex == 0){
+				document.getElementById("check").disabled = false;
+			}
+			else{
+				document.getElementById("check").disabled = true;
+			}
+		}
+	</script>
+</body>
+
+</html>
