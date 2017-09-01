@@ -187,6 +187,15 @@
 
 	<script>
 
+		document.getElementById('text').onkeypress = function(e){
+		    if (!e) e = window.event;
+		    var keyCode = e.keyCode || e.which;
+		    if (keyCode == '13'){
+		      sbmit();
+		      return false;
+		    }
+		  }
+
 		function sbmit(){
 			var text = document.getElementById("text").value.toUpperCase().split("");
 			var e = document.getElementById("emoji").value;
