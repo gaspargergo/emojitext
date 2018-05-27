@@ -197,9 +197,9 @@
 		    }
 		  }
 
-		function sbmit(){
+		function sbmit(char){
 			var text = document.getElementById("text").value.toUpperCase().split("");
-			var e = document.getElementById("emoji").value;
+			var e = char || document.getElementById("emoji").value;
 			var b = document.getElementById("background").value;
 			document.getElementById("textbox").innerHTML = "";
 			if(document.getElementById("check").checked && document.getElementById("background").selectedIndex == 0){
